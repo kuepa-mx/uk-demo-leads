@@ -3,13 +3,16 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.tsx";
 import { PrimeReactProvider } from "primereact/api";
+import { QueryClient, QueryClientProvider } from "react-query";
 
-import "primereact/resources/themes/vela-purple/theme.css";
+const client = new QueryClient();
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <PrimeReactProvider>
-      <App />
+      <QueryClientProvider client={client}>
+        <App />
+      </QueryClientProvider>
     </PrimeReactProvider>
   </StrictMode>
 );

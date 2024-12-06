@@ -1,0 +1,104 @@
+[
+  {
+    "pais_id": "054e1b3f-6a82-424a-b9e5-6e90965fc5c3",
+    "pais_nombre": "Argentina",
+    "pais_moneda": "Dolares",
+    "pais_activo": true
+  },
+  {
+    "pais_id": "0e85a723-86fe-4819-938e-43e2d0fa4071",
+    "pais_nombre": "Guatemala",
+    "pais_moneda": "Quetzales",
+    "pais_activo": true
+  },
+  {
+    "pais_id": "14cea142-f30c-4643-b279-e447f3e09eb0",
+    "pais_nombre": "Bolivia",
+    "pais_moneda": "Boliviano",
+    "pais_activo": true
+  },
+  {
+    "pais_id": "2249d96f-9bdc-4b1d-a626-9736c38b44d7",
+    "pais_nombre": "Honduras",
+    "pais_moneda": "Lempiras",
+    "pais_activo": true
+  },
+  {
+    "pais_id": "2e710161-7c61-474d-a0dd-5d1128934c2a",
+    "pais_nombre": "Uruguay",
+    "pais_moneda": "Peso Uruguayo",
+    "pais_activo": true
+  },
+  {
+    "pais_id": "472f032c-cc3f-4992-a4fe-3567caba1e44",
+    "pais_nombre": "El Salvador",
+    "pais_moneda": "Dolares",
+    "pais_activo": true
+  },
+  {
+    "pais_id": "48a4da3d-4c68-409e-9d1a-7b006f9b9557",
+    "pais_nombre": "Panama",
+    "pais_moneda": "Dolares",
+    "pais_activo": true
+  },
+  {
+    "pais_id": "5a4668d7-4c44-4bb7-88ad-3cfe2e6a48c9",
+    "pais_nombre": "Republica Dominicana",
+    "pais_moneda": "Pesos Dominicanos",
+    "pais_activo": true
+  },
+  {
+    "pais_id": "6ca21306-4c46-470a-9027-e4a5f7118a3e",
+    "pais_nombre": "Paraguay",
+    "pais_moneda": "Guarani Paraguayo",
+    "pais_activo": true
+  },
+  {
+    "pais_id": "6e8c7900-2298-411b-8118-b2ffa3cd0699",
+    "pais_nombre": "Ecuador",
+    "pais_moneda": "Dolares",
+    "pais_activo": true
+  },
+  {
+    "pais_id": "77935d8f-d27b-4780-8ec9-df1d4c23f8ee",
+    "pais_nombre": "Nicaragua",
+    "pais_moneda": "Cordobas",
+    "pais_activo": true
+  },
+  {
+    "pais_id": "890fb0cf-15f8-459d-9a8e-1b4f1a82abf1",
+    "pais_nombre": "Mexico",
+    "pais_moneda": "Pesos",
+    "pais_activo": true
+  },
+  {
+    "pais_id": "a0c62d35-04a2-491c-a5db-1efbaf623f59",
+    "pais_nombre": "EUA",
+    "pais_moneda": "Dolares EUA",
+    "pais_activo": true
+  },
+  {
+    "pais_id": "ae6758ef-e049-4735-8421-cf6963f76b7e",
+    "pais_nombre": "Chile",
+    "pais_moneda": "Pesos Chilenos",
+    "pais_activo": true
+  },
+  {
+    "pais_id": "b79f05cc-4d30-415b-8db2-8a86766bd5d2",
+    "pais_nombre": "Costa Rica",
+    "pais_moneda": "Colones Costarricenses",
+    "pais_activo": true
+  },
+  {
+    "pais_id": "cf30e37d-e17e-4c2e-a2f3-aa1f95945303",
+    "pais_nombre": "Peru",
+    "pais_moneda": "Soles Peruanos",
+    "pais_activo": true
+  },
+  {
+    "pais_id": "ebf7272f-6505-4834-8959-8f59de8e579b",
+    "pais_nombre": "Colombia",
+    "pais_moneda": "Pesos Colombianos",
+    "pais_activo": true
+  }
+]

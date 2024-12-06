@@ -1,0 +1,121 @@
+[
+  {
+    "carrera_id": "051a618d-1c98-4dba-85e6-88b5678f4a3e",
+    "carrera_nombre": "Licenciatura en Mercadotecnia",
+    "carrera_codigo": "LEM",
+    "carrera_activo": true,
+    "cuenta_id": "6a20d8d0-6c08-40ce-a5f6-5889e981d7e6"
+  },
+  {
+    "carrera_id": "06d03215-6f5e-4d9d-8eb9-c37a2f46c05b",
+    "carrera_nombre": "Licenciatura en Finanzas",
+    "carrera_codigo": "LAF",
+    "carrera_activo": true,
+    "cuenta_id": "e24edc50-2283-46f9-a29b-53bb57ab53a7"
+  },
+  {
+    "carrera_id": "3699d79d-a57f-424b-8022-cb18b03f6ed0",
+    "carrera_nombre": "Maestria Edtech",
+    "carrera_codigo": "EDT",
+    "carrera_activo": true,
+    "cuenta_id": "4409794c-8737-4593-aa81-3387e841c657"
+  },
+  {
+    "carrera_id": "3e74ea25-d02e-43d1-b8ed-9db1dce2d3d5",
+    "carrera_nombre": "Licenciatura en Derecho",
+    "carrera_codigo": "LED",
+    "carrera_activo": true,
+    "cuenta_id": "7995c90d-b189-425f-80ae-a794229ed79a"
+  },
+  {
+    "carrera_id": "462b56da-5d37-40bf-abe9-2250804da0c1",
+    "carrera_nombre": "Licenciatura en Coaching",
+    "carrera_codigo": "LIC",
+    "carrera_activo": true,
+    "cuenta_id": "0e47b028-379a-4361-b541-1d2df95c0455"
+  },
+  {
+    "carrera_id": "4c6f87c3-7996-4048-99d7-851611267851",
+    "carrera_nombre": "Maestria en Inteligencia Artificial",
+    "carrera_codigo": "MIA",
+    "carrera_activo": true,
+    "cuenta_id": "ae19775b-6b0f-4c5f-8ba3-e6673a2c2d48"
+  },
+  {
+    "carrera_id": "571b73be-c166-4163-ba32-04a50b055a6f",
+    "carrera_nombre": "Licenciatura en Comunicacion",
+    "carrera_codigo": "COM",
+    "carrera_activo": true,
+    "cuenta_id": "fd8a9e50-cbee-4eb2-9d7a-af08581a9b58"
+  },
+  {
+    "carrera_id": "8430a5a3-3e8f-4f64-a077-27a3d3c04631",
+    "carrera_nombre": "Ingenieria Industrial",
+    "carrera_codigo": "IID",
+    "carrera_activo": true,
+    "cuenta_id": "606460ea-a4c3-4a96-8e78-89978cc075cc"
+  },
+  {
+    "carrera_id": "8a71c57d-79f6-4489-a0ce-6faf98bad986",
+    "carrera_nombre": "Maestria en Derecho Fiscal",
+    "carrera_codigo": "MDF",
+    "carrera_activo": true,
+    "cuenta_id": "4316a21e-fef9-464f-b54e-27eb415233e3"
+  },
+  {
+    "carrera_id": "a8d1619e-dab9-4ac3-9e3e-655aa9c32a8a",
+    "carrera_nombre": "Licenciatura en Arquitectura",
+    "carrera_codigo": "ARQ",
+    "carrera_activo": true,
+    "cuenta_id": "284deae2-a98c-432d-9fc3-8b6ebe96defb"
+  },
+  {
+    "carrera_id": "aad94c3f-a105-44d0-b173-d1637cd89bf0",
+    "carrera_nombre": "Licenciatura en Psicologia",
+    "carrera_codigo": "LIP",
+    "carrera_activo": true,
+    "cuenta_id": "72d1761d-caaf-431e-9a78-7e704b2a4ede"
+  },
+  {
+    "carrera_id": "ad84d4f0-1e47-44d8-ab74-d14a0f36292d",
+    "carrera_nombre": "Licencitura en Derecho Internacional",
+    "carrera_codigo": "LDI",
+    "carrera_activo": true,
+    "cuenta_id": "fe85043c-1f68-47e2-ab61-538e6870f9e9"
+  },
+  {
+    "carrera_id": "dfee52f9-52ed-4e65-91d9-33c804f76bb1",
+    "carrera_nombre": "Ingenieria en Sistemas",
+    "carrera_codigo": "IES",
+    "carrera_activo": true,
+    "cuenta_id": "9d2a4b54-3ae1-4eab-933a-eb2cbee6e48b"
+  },
+  {
+    "carrera_id": "e360d640-e270-4c3b-8dc7-c36c4f203c4c",
+    "carrera_nombre": "Licenciatura en Administracion",
+    "carrera_codigo": "LAD",
+    "carrera_activo": true,
+    "cuenta_id": "86264040-4f94-435a-b918-851617bd6f55"
+  },
+  {
+    "carrera_id": "ec21e19c-362c-4c6c-a7a3-2309d45a1c00",
+    "carrera_nombre": "MBA",
+    "carrera_codigo": "MBA",
+    "carrera_activo": true,
+    "cuenta_id": "c5821cfc-c42f-4bf3-86e1-8e64255a334d"
+  },
+  {
+    "carrera_id": "f7666e0c-9a96-462c-a680-2f1dba1499ea",
+    "carrera_nombre": "Licenciatura en Pedagogia",
+    "carrera_codigo": "LEP",
+    "carrera_activo": true,
+    "cuenta_id": "996900b2-978d-43ec-8913-d4690f4a9f1c"
+  },
+  {
+    "carrera_id": "fc9596ef-78e1-412d-a9f7-20733cca1135",
+    "carrera_nombre": "Licenciatura en Contabilidad",
+    "carrera_codigo": "LEC",
+    "carrera_activo": true,
+    "cuenta_id": "ab1da709-45c7-42a0-bced-2608c38537e9"
+  }
+]
