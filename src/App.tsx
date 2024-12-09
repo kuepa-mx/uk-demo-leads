@@ -14,6 +14,15 @@ import { classNames } from "primereact/utils";
 import validationSchema, { Fields } from "./schema/lead.schema";
 import { yupResolver } from "@hookform/resolvers/yup";
 
+const textFields = ["nombre", "email", "telefono"] as (keyof Fields)[];
+const labels: Record<keyof Fields, string> = {
+  nombre: "Nombre",
+  email: "Correo",
+  carrera: "Carrera",
+  pais: "País",
+  telefono: "Teléfono",
+};
+
 function App() {
   const toast = useRef<Toast>(null);
   const { data: careers, isLoading: isCareersLoading } = useQuery(
@@ -24,7 +33,7 @@ function App() {
     "countries",
     getCountries
   );
-  const { handleSubmit, register, control, formState } = useForm<Fields>({
+  const { handleSubmit, control, formState } = useForm<Fields>({
     defaultValues: {
       carrera: "",
       email: "",
@@ -48,7 +57,7 @@ function App() {
       .then(() => {
         toast.current?.show({
           severity: "success",
-          summary: "Lead Guardado exitosamente",
+          summary: "Lead creado exitosamente",
         });
       })
       .catch((error) => {
@@ -56,7 +65,7 @@ function App() {
         toast.current?.show({
           severity: "error",
           summary: "Error",
-          detail: "Ha ocurrido un error al guardar",
+          detail: "Ha ocurrido un error al crear",
         });
       });
   };
@@ -78,12 +87,14 @@ function App() {
     name,
     input,
     label,
+    className = "",
   }: {
     input: React.ReactNode;
     name: keyof Fields;
     label: string;
+    className?: string;
   }) => (
-    <div className="field flex flex-col">
+    <div className={`field flex flex-col mx-2 my-2 grow-0 ${className}`}>
       <FloatLabel>
         {input}
         <label htmlFor={name}>{label}</label>
@@ -103,52 +114,43 @@ function App() {
       <main className="grid align-middle">
         <Card
           title={<h1 className="mb-6 text-center">Crear Lead</h1>}
-          className="w-fit mx-auto p-4"
+          className="sm:mx-auto max-w-screen-xl mx-6 p-6 shadow-lg"
           pt={{
             content: { className: "p-0" },
             title: { className: "vertical-align-middle" },
+            body: { className: "p-0" },
           }}
         >
           <form
             onSubmit={handleSubmit(onSuccess, onError)}
-            className={classNames("grid grid-cols-2 gap-4 relative", {
-              "opacity-50 pointer-events-none":
-                formState.isSubmitting || formState.isLoading,
-            })}
+            className={classNames(
+              "flex flex-col sm:grid sm:grid-cols-[50%_50%] relative",
+              {
+                "opacity-50 pointer-events-none":
+                  formState.isSubmitting || formState.isLoading,
+              }
+            )}
           >
-            <Field
-              name="nombre"
-              label="Nombre"
-              input={
-                <Controller
-                  name="nombre"
-                  control={control}
-                  render={({ field }) => <InputText {...field} />}
-                />
-              }
-            />
-            <Field
-              name="email"
-              label="E-mail"
-              input={
-                <Controller
-                  name="email"
-                  control={control}
-                  render={({ field }) => <InputText {...field} />}
-                />
-              }
-            />
-            <Field
-              name="telefono"
-              label="Telefono"
-              input={
-                <Controller
-                  name="telefono"
-                  control={control}
-                  render={({ field }) => <InputText {...field} />}
-                />
-              }
-            />
+            {textFields.map((name) => (
+              <Field
+                key={name}
+                name={name}
+                label={labels[name]}
+                input={
+                  <Controller
+                    name={name}
+                    control={control}
+                    render={({ field }) => (
+                      <InputText
+                        {...field}
+                        {...(name === "telefono" && { type: "tel" })}
+                        {...(name === "email" && { type: "email" })}
+                      />
+                    )}
+                  />
+                }
+              />
+            ))}
             <Field
               name="pais"
               label="Pais"
@@ -162,7 +164,7 @@ function App() {
                       options={countries}
                       loading={isCountriesLoading}
                       filter
-                      className="w-full"
+                      className="w-full grow-0"
                       optionLabel="pais_nombre"
                       optionValue="pais_id"
                     />
@@ -173,6 +175,7 @@ function App() {
             <Field
               name="carrera"
               label="Carrera"
+              className="col-span-2"
               input={
                 <Controller
                   name="carrera"
@@ -192,16 +195,14 @@ function App() {
                 />
               }
             />
-
             {(formState.isLoading || formState.isSubmitting) && (
               <ProgressSpinner className="absolute m-auto top-0 left-0 right-0 bottom-0" />
             )}
-
             <Button
               disabled={formState.isSubmitting}
-              className="col-span-2 px-6 w-fit mt-4 ml-auto"
+              className="col-span-2 px-8 w-fit m-2 mt-8 ml-auto"
             >
-              Guardar
+              Crear
             </Button>
           </form>
         </Card>
