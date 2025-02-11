@@ -18,7 +18,9 @@ const validationSchema = Yup.object().shape({
     .min(7, "El teléfono debe tener al menos 7 dígitos")
     .max(15, "El teléfono no puede exceder los 15 dígitos"),
 
-  carrera: Yup.string().required("Carrera es requerido"),
+  producto: Yup.string().required("Producto es requerido"),
+  status: Yup.string().required("Status es requerido"),
+  owner: Yup.string().required("Owner es requerido"),
 });
 
 export type Fields = Yup.InferType<typeof validationSchema>;

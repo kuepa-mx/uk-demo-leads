@@ -2,7 +2,14 @@ import { Controller, useForm } from "react-hook-form";
 import { Menubar } from "primereact/menubar";
 import { Card } from "primereact/card";
 import { useQuery } from "react-query";
-import { createLead, getCareers, getCountries } from "./services";
+import {
+  createLead,
+  getCareers,
+  getCountries,
+  getOwners,
+  getProducts,
+  getStatus,
+} from "./services";
 import { InputText } from "primereact/inputtext";
 import { FloatLabel } from "primereact/floatlabel";
 import { Dropdown } from "primereact/dropdown";
@@ -18,16 +25,26 @@ const textFields = ["nombre", "email", "telefono"] as (keyof Fields)[];
 const labels: Record<keyof Fields, string> = {
   nombre: "Nombre",
   email: "Correo",
-  carrera: "Carrera",
+  producto: "Producto",
   pais: "País",
   telefono: "Teléfono",
+  owner: "Owner",
+  status: "Status",
 };
 
 function App() {
   const toast = useRef<Toast>(null);
-  const { data: careers, isLoading: isCareersLoading } = useQuery(
+  const { data: products, isLoading: isProductsLoading } = useQuery(
     "careers",
-    getCareers
+    getProducts
+  );
+  const { data: statuses, isLoading: isStatusesLoading } = useQuery(
+    "statuses",
+    getStatus
+  );
+  const { data: owners, isLoading: isOwnersLoading } = useQuery(
+    "owners",
+    getOwners
   );
   const { data: countries, isLoading: isCountriesLoading } = useQuery(
     "countries",
@@ -35,11 +52,13 @@ function App() {
   );
   const { handleSubmit, control, formState } = useForm<Fields>({
     defaultValues: {
-      carrera: "",
+      producto: "",
       email: "",
       nombre: "",
       pais: "",
       telefono: "",
+      owner: "",
+      status: "",
     },
     resolver: yupResolver(validationSchema),
   });
@@ -47,11 +66,18 @@ function App() {
   const onSuccess: Parameters<typeof handleSubmit>[0] = async (data) => {
     await createLead({
       ...data,
+      telefono_lada: data.telefono,
+      status: {
+        status_id: data.status,
+      },
       pais: {
         pais_id: data.pais,
       },
-      carrera: {
-        carrera_id: data.carrera,
+      producto: {
+        producto_id: data.producto,
+      },
+      owner: {
+        owner_id: data.owner,
       },
     })
       .then(() => {
@@ -161,7 +187,7 @@ function App() {
                   render={({ field }) => (
                     <Dropdown
                       {...field}
-                      options={countries}
+                      options={countries?.data}
                       loading={isCountriesLoading}
                       filter
                       className="w-full grow-0"
@@ -173,23 +199,69 @@ function App() {
               }
             />
             <Field
-              name="carrera"
-              label="Carrera"
+              name="producto"
+              label="Producto"
               className="col-span-2"
               input={
                 <Controller
-                  name="carrera"
-                  rules={{ required: "Carrera es requerido" }}
+                  name="producto"
+                  rules={{ required: "Producto es requerido" }}
                   control={control}
                   render={({ field }) => (
                     <Dropdown
                       {...field}
-                      options={careers}
-                      loading={isCareersLoading}
+                      options={products?.data}
+                      loading={isProductsLoading}
                       filter
                       className="w-full"
-                      optionLabel="carrera_nombre"
-                      optionValue="carrera_id"
+                      optionLabel="nombre_producto"
+                      optionValue="producto_id"
+                    />
+                  )}
+                />
+              }
+            />
+            <Field
+              name="owner"
+              label="Owner"
+              className="col-span-2"
+              input={
+                <Controller
+                  name="owner"
+                  rules={{ required: "Owner es requerido" }}
+                  control={control}
+                  render={({ field }) => (
+                    <Dropdown
+                      {...field}
+                      options={owners?.data}
+                      loading={isOwnersLoading}
+                      filter
+                      className="w-full"
+                      optionLabel="owner_nombre"
+                      optionValue="owner_id"
+                    />
+                  )}
+                />
+              }
+            />
+            <Field
+              name="status"
+              label="Status"
+              className="col-span-2"
+              input={
+                <Controller
+                  name="status"
+                  rules={{ required: "Status es requerido" }}
+                  control={control}
+                  render={({ field }) => (
+                    <Dropdown
+                      {...field}
+                      options={statuses?.data}
+                      loading={isStatusesLoading}
+                      filter
+                      className="w-full"
+                      optionLabel="status_nombre"
+                      optionValue="status_id"
                     />
                   )}
                 />
