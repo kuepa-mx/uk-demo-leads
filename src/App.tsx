@@ -4,7 +4,6 @@ import { Card } from "primereact/card";
 import { useQuery } from "react-query";
 import {
   createLead,
-  getCareers,
   getCountries,
   getOwners,
   getProducts,
